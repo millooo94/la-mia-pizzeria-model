@@ -1,15 +1,1 @@
-﻿@model Pizza[]
-
-@{
-    ViewData["Title"] = "My pizzas";
-    var pizzas = Model;
-}
-
-<div class="container">
-    <div class="row row-cols-3">
-        @foreach (var pizza in pizzas)
-        {
-            @await Html.PartialAsync("_Card", pizza)
-        }
-    </div>
-</div>
+﻿
