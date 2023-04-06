@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+    var pizzas = new Pizza[]
+        {
+        new(
+            img: "/img/margherita.jpg",
+            name: "Margherita",
+            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia quis est adipisci incidunt rem nostrum ipsam fuga ratione tempora eveniet!",
+            price: 5  
+
+        ),
+        new(
+            img: "/img/brontese.png",
+            name: "Brontese",
+            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia quis est adipisci incidunt rem nostrum ipsam fuga ratione tempora eveniet!",
+            price: 13
+
+        ),
+        new(
+            img: "/img/pizza-fritta.jpg",
+            name: "Pizza fritta",
+            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia quis est adipisci incidunt rem nostrum ipsam fuga ratione tempora eveniet!",
+            price: 7
+        ),
+        };
+}
+
+
+
+<div class="container">
+    <div class="row row-cols-3">
+            @for (var i = 0; i < pizzas.Length; i++)
+            {
+                @await Html.PartialAsync("_Card", pizzas[i])
+            }
+    </div>
+</div>
+
