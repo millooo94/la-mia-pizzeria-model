@@ -2,18 +2,11 @@
 {
     public class Pizza
     {
-        public Pizza(string name, string description, float price, string img) 
-        { 
-            Name = name;
-            Description = description;
-            Price = price;
-            Img = img;
-        }
-
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
         public float Price { get; set; }
-        public string Img { get; set; }
+        public string Img { get; set; } = string.Empty;
 
     }
 }
